@@ -1,0 +1,30 @@
+{
+	"version": "2",
+	"templates": [
+        {
+			"type": 2,
+			"title": "Fabrick Mastercard IDCM",
+			"description": "IDCM setup with a Kong, Keycloak and Hydra",
+			"note": "Deploys a IDCM instance.",
+			"categories": [
+				"Payments"
+			],
+			"platform": "linux",
+			"logo": "https://www.fabrick.com/wp-content/themes/fabrick/img/fabrick.svg",
+			"repository": {
+				"url": "https://github.com/portainer/templates",
+				"stackfile": "stacks/wordpress/docker-stack.yml"
+			},
+			"env": [{
+				"name": "TENANT_CODE",
+				"label": "Tenant Code",
+				"description": "The bank assigned Tenant Code."
+			},
+            {
+				"name": "MASETRCARD_MIS_URL",
+				"label": "Mastercard MIS Url",
+				"description": "The Mastercard MIS Backend URL."
+			}]
+		}
+	]
+}
